@@ -1,38 +1,292 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  color: #152c62;
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
+li {
+  list-style: none;
+}
+.app {
   min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #63a4ff;
+  background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+  overflow-x: hidden;
+}
+.header {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 2rem;
+  z-index: 5;
+}
+.header .logo {
+  flex: 0.4;
+}
+
+.header .logo img {
+  width: 100px;
+}
+.header ul {
+  height: 100%;
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.header ul li a {
+  font-weight: 600;
+  padding: 1rem;
+  transition: all 0.5s ease;
+  border-radius: 10px;
+  color: #fff;
+}
+.header ul li a:hover {
+  background-color: #00030860;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* .hero h1 {
+  font-size: 20rem;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  color: #1a1a1a1a;
+} */
+.scroll {
+  padding: 1.5rem;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.scroll h3 {
+  font-size: 1.5rem;
+  color: #aebec5;
+  cursor: pointer;
+}
+.scroll h3:nth-child(2) {
+  color: #152c62;
+  font-weight: 600;
+}
+.scroll div {
+  width: 2px;
+  height: 100px;
+  background: #152c62;
+}
+.hero-left {
+  z-index: 2;
+  margin-left: 6rem;
+}
+.hero-left h2 {
+  color: #152c62;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+.hero-right {
+  position: relative;
+}
+.hero-right img {
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 4;
+}
+.hero-left p {
+  color: #152c62;
+  font-weight: 400;
+}
+.hero-left button {
+  width: 50%;
+  height: 8vh;
+  border: none;
+  border-radius: 10px;
+  background: #2cb7af;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero-left button:hover {
+  background-color: #00030860;
+}
+.leafone {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: rotate(60deg);
+}
+.leaftwo {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: rotate(60deg);
+}
+.leafthree {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: rotate(160deg);
+}
+.leaftwo {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: rotate(-60deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* About section */
+.about-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #181717;
+}
+.about-left img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+.about-right {
+  color: #ffffff;
+  font-weight: 400;
+}
+.about-right p {
+  width: 70%;
+  font-size: 1.3rem;
+}
+.about-left {
+  position: relative;
+}
+.about-right .right-down p {
+  width: 60%;
+  background: #00030860;
+  color: #f6f6f6c2;
+  padding: 2rem;
+  border-radius: 10px;
+}
+.right-down button {
+  width: 30%;
+  height: 6vh;
+  border: none;
+  border-radius: 10px;
+  background: #2cb7af;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ingredients-section {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.ingredients-section img {
+  max-width: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.testimonials-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #181717;
+}
+.testimonials-left {
+  position: relative;
+  flex: 0.5;
+  background-image: url("https://images.pexels.com/photos/388514/pexels-photo-388514.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.testimonials-right {
+  flex: 0.5;
+}
+.bg-dots {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.testimonials-right-content {
+  width: 70%;
+  height: 100%;
+  font-size: 1.3rem;
+  color: #fff;
+}
+.stars img {
+  margin-right: 0.5rem;
+}
+.testimonials-right-content p {
+  margin-bottom: 0.7rem;
+}
+.about-left .leafone {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: rotate(-60deg);
+}
+.about-left .leaftwo {
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: rotate(60deg);
+}
+.about-left .leafthree {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: rotate(160deg);
+}
+.footer-section {
+  width: 100%;
+  height: 15vh;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  color: #bbbfbd;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.footer-section ul li a {
+  color: #bbbfbd;
+}
+.footer-section ul li {
+  margin-bottom: 5px;
 }
